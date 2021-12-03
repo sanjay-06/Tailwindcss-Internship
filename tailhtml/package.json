@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css":"tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
   "author": "sanjay",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@mui/icons-material": "^5.2.0"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",

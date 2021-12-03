@@ -7,31 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-gray-400 font-body">
-   <div class="grid md:grid-cols-3">
+   <div class="grid md:grid-cols-5">
        <div class="md:col-span-1">
-          <div>
+          <div class="md:fixed">
               <nav>
+              <div class="flex justify-between items-center">
                  <div>
-                    <h1 class="text-3xl text-gray-900 font-bold uppercase p-4 border-b">
-                      <a href="/">Website</a>
+                    <h1 class="text-3xl text-gray-900 font-bold uppercase p-4">
+                      <a href="/" class="hover:text-red-300">Website</a>
                     </h1>
                   </div>
-                  <ul class="ml-3">
-                    <li class="text-gray-700 font-bold mt-4">
-                      <a href="#">
-                          <span>Home</span>
+                  <div class="px-4 cursor-pointer md:hidden" id="menu">
+                    <svg class="w-9" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </div>
+                </div>
+                  <ul class="ml-3 hidden md:block" id="menubar">
+                    <li class="text-gray-700 font-bold mt-4 p-3 flex">
+                      <a href="#" class="hover:text-red-400">
+                          <span class="text-base">
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            &nbsp;Home
+                          </span>
                       </a>
                     </li>
 
-                    <li>
-                      <a href="#">
-                          <span>About</span>
+                    <li class="p-3"> 
+                      <a href="#" class="hover:text-red-400">
+                          <span>
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            &nbsp;About</span>
                       </a>
                     </li>
 
-                    <li>
-                      <a href="#">
-                          <span>Contact</span>
+                    <li class="p-3">
+                      <a href="#" class="hover:text-red-400">
+                          <span>
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            &nbsp;Contact</span>
+                      </a>
+                    </li>
+
+                    <li class="p-3 invisible" id="vis1">
+                      <a href="#" class="hover:text-red-400">
+                          <span>
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                            </svg>
+                            &nbsp;Login</span>
+                      </a>
+                    </li>
+
+                    <li class="p-3 invisible" id="vis">
+                      <a href="#" class="hover:text-red-400">
+                          <span>
+                            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                            </svg>
+                            &nbsp;Signup</span>
                       </a>
                     </li>
                   </ul>
@@ -39,22 +79,22 @@
           </div>
         </div>
 
-        <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+        <main class="px-16 py-6 bg-gray-100 md:col-span-4 h-full">
             <div class="flex justify-center md:justify-end">
-              <a href="#" class="text-primary">Login </a>
-              <a href="#" class="text-primary ml-2">Signup </a>
+              <a href="#" class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-500 hidden md:block">Login </a>
+              <a href="#" class="btn text-primary border-primary md:border-2 ml-2 hover:bg-primary hover:text-white  transition ease-out duration-500 hidden md:block">Signup </a>
             </div>
 
             <header class="py-8">
               <h2 class="text-gray-700 text-3xl">Accessories</h2>
-              <h3 class="text-xl font-semibold">Watches|Bags</h3>
+              <h3 class="text-xl font-semibold">Page</h3>
             </header>
 
             <div>
               <h4 class="font-bold text-gray-600 mt-4 border-b border-gray-200 py-2">Latest Arrivals</h4>
               
               <div class="mt-8 grid lg:grid-cols-3 gap-10">
-                  <div class="card">
+                  <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
                     <img src="img/fsr.jpeg" alt="fossil" class="w-full md:w-full h-40 sm:h-42 object-cover">
                     <div class="m-4">
                       <span class="font-bold">Fossil FSR Edition</span>
@@ -62,12 +102,14 @@
                     </div>
                     <div class="badge">
                       <span>
-                        limited edition
+                        <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg> limited edition
                       </span>
                     </div>
                   </div>
 
-                  <div class="card">
+                  <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
                     <img src="img/casio.png" alt="casio" class="w-full h-40 sm:h-50 object-cover">
                     <div class="m-4">
                       <span class="font-bold capitalize">Casio edifice</span>
@@ -75,12 +117,14 @@
                     </div>
                     <div class="badge">
                       <span>
-                        limited edition
+                        <svg class="w-5 inline-block"  xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg> limited edition
                       </span>
                     </div>
                   </div>
 
-                  <div class="card">
+                  <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
                     <img src="img/touch.jpg" alt="fossil" class="w-full md:w-full h-40 sm:h-42 object-cover">
                     <div class="m-4">
                       <span class="font-bold">Fossil Touch</span>
@@ -88,22 +132,73 @@
                     </div>
                     <div class="badge">
                       <span>
+                        <svg class="w-5 inline-block"  xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
                         sale
                       </span>
                     </div>
                   </div>
               </div>
-              <h4 class="font-bold text-gray-600 pb-10">Most popular</h4>
-              <div class="mt-8">
-                  <!--card here-->
-              </div>
+              <div class="mt-20 flex justify-center">
+                <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-5 transit ease-out duration-300" id="load">Load more</div>
+             </div>
+              <div class="hidden mt-8 lg:grid-cols-3 gap-10" id="show">
+                <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
+                  <img src="img/armani.jpg" alt="armani" class="w-full md:w-full h-40 sm:h-42 object-cover">
+                  <div class="m-4">
+                    <span class="font-bold">Armani Exchange</span>
+                    <span class="block text-sm">watches</span>
+                  </div>
+                  <div class="badge">
+                    <span>
+                      <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg> limited edition
+                    </span>
+                  </div>
+                </div>
 
-              <div class="flex justify-center">
-                 <div class="bg-secondary-100 text-secondary-200">Load more</div>
-              </div>
+                <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
+                  <img src="img/tissot.jpg" alt="tissot" class="w-full h-40 sm:h-50 object-cover">
+                  <div class="m-4">
+                    <span class="font-bold capitalize">Tissot</span>
+                    <span class="block text-sm">watches</span>
+                  </div>
+                  <div class="badge">
+                    <span>
+                      <svg class="w-5 inline-block"  xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg> limited edition
+                    </span>
+                  </div>
+                </div>
+
+                <div class="card hover:shadow-2xl hover:transition ease-in-out duration-500">
+                  <img src="img/swiss.jpg" alt="swiss" class="w-full md:w-full h-40 sm:h-42 object-cover">
+                  <div class="m-4">
+                    <span class="font-bold">Swiss Eagle</span>
+                    <span class="block text-sm">watches</span>
+                  </div>
+                  <div class="badge">
+                    <span>
+                      <svg class="w-5 inline-block"  xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                      sale
+                    </span>
+                  </div>
+                </div>
             </div>
+          </div>
+              <div class="mt-10 flex justify-center">
+                <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-5 transit ease-out duration-300 hidden" id="less">show Less</div>
+             </div>
+            </div>
+            
         </main>
       </div>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
