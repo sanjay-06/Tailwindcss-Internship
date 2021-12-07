@@ -9,7 +9,7 @@ const data = [
   },
   {
     id: 2,
-    image: './images/homepage/reopen_return_engage.webp',
+    image: '../images/homepage/reopen_return_engage.webp',
     title: 'Reopen, return, and engage',
     desc:
       'Give your teams the tools they need to stay safe and productive as they return to the workplace.',
@@ -17,7 +17,7 @@ const data = [
   },
   {
     id: 3,
-    image: './images/homepage/ms_teams.webp',
+    image: '../images/homepage/ms_teams.webp',
     title: 'Microsoft Teams',
     desc: 'Chat, meet, call and collaborate.',
     link: 'Learn more',
