@@ -27,7 +27,7 @@ const data = [
     image: './images/homepage/ms_security_response_center.webp',
     title: 'Microsoft Security Response Center',
     desc:
-      'Get information and recommendations from cybersecurity experts regarding the recent nation-state cyber attacks.',
+      'Get information and recommendations from cybersecurity experts regarding the recent nation-state cyber attack.',
     link: 'Learn more',
   },
 ]
